@@ -1,7 +1,8 @@
 <template>
   <router-link
     class="event-link"
-    :to="{ name: 'EventDetails', params: { id: event.id } }"
+    v-if="event"
+    :to="{ name: 'EventDetails', params: { id: event.id, title: event.title } }"
   >
     <div class="event-card" v-if="event">
       <span>@ {{ event.time }} on {{ event.date }}</span>

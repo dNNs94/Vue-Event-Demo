@@ -10,7 +10,10 @@
 import EventService from '@/services/EventService';
 
 export default {
-  props: ['id'],
+  props: {
+    id: Number,
+    title: String
+  },
   data() {
     return {
       event: null
