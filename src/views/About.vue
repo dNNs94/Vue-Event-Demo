@@ -1,5 +1,6 @@
 <template>
   <div class="about">
-    <h1>This is an about page</h1>
+    <h1>A Site for Events to better the world.</h1>
+    <h2>Built entirely with Vue.js</h2>
   </div>
 </template>
