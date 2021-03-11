@@ -4,34 +4,34 @@
 
     <h1>Events For Vue</h1>
     <div class="event-container">
-      <EventCard v-for="event in events" :key="event.id" :event="event"/>
+      <EventCard v-for="event in events" :key="event.id" :event="event" />
     </div>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import EventCard from "@/components/EventCard";
-import EventService from '@/services/EventService'
+import EventCard from '@/components/EventCard';
+import EventService from '@/services/EventService';
 
 export default {
-  name: "EventList",
+  name: 'EventList',
   components: {
-    EventCard,
+    EventCard
   },
   data() {
     return {
       events: []
-    }
+    };
   },
   created() {
     EventService.getEvents()
-    .then(response => {
-      this.events = response.data
-    })
-    .catch(error => {
-      console.log(error)
-    })
+      .then(response => {
+        this.events = response.data;
+      })
+      .catch(error => {
+        console.log(error);
+      });
   }
 };
 </script>

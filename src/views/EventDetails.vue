@@ -7,28 +7,26 @@
 </template>
 
 <script>
-import EventService from "@/services/EventService";
+import EventService from '@/services/EventService';
 
 export default {
   props: ['id'],
   data() {
     return {
-      event: null,
-    }
+      event: null
+    };
   },
   created() {
     // fetch event details
     EventService.getEvent(this.id)
-        .then(response => {
-          this.event = response.data
-        })
-        .catch(error => {
-          console.log(error)
-        })
+      .then(response => {
+        this.event = response.data;
+      })
+      .catch(error => {
+        console.log(error);
+      });
   }
-}
+};
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>
