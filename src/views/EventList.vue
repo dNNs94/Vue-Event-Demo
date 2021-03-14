@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <div class="event-container">
-      <h1>Events For {{ user.user.name }}</h1>
+      <h1>Events For Vue</h1>
       <EventCard v-for="event in event.events" :key="event.id" :event="event" />
       <template v-if="shouldDisplayPrevious">
         <router-link
