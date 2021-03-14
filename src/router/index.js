@@ -3,6 +3,7 @@ import EventList from '../views/EventList.vue';
 import About from '../views/About';
 import EventDetails from '@/views/EventDetails';
 import NotFound from '@/views/NotFound';
+import EventCreate from '@/views/EventCreate';
 
 /* eslint-disable */
 
@@ -21,6 +22,14 @@ const routes = [
     component: About,
     meta: {
       title: 'About'
+    }
+  },
+  {
+    path: '/create',
+    name: 'EventCreate',
+    component: EventCreate,
+    meta: {
+      title: 'Create Event'
     }
   },
   {
